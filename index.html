@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+    <title>Memoria de trabajo N-Back</title>
+    <link rel="stylesheet" href="styles/nback-game.css">
+    <meta name="description" content="Descubre como el entrenamiento diario n-Back puede ayudar a desarrollar tu memoria">
+
+    <style>
+
+
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="nback-game">
+      
+</script>
+
+</style>
+
+<link rel="stylesheet" id="generate-style-css" href="https://www.psicoactiva.com/wp-content/themes/generatepress/assets/css/main.min.css" media="print" onload="this.media=&#039;all&#039;;this.onload=null;"></link>
+<style id='generate-style-inline-css'>
+.no-featured-image-padding .featured-image {margin-left:-0px;margin-right:-0px;}.post-image-above-header .no-featured-image-padding .inside-article .featured-image {margin-top:-0px;}@media (max-width:768px){.no-featured-image-padding .featured-image {margin-left:-20px;margin-right:-20px;}.post-image-above-header .no-featured-image-padding .inside-article .featured-image {margin-top:-20px;}}
+.is-right-sidebar{width:25%;}.is-left-sidebar{width:25%;}.site-content .content-area{width:75%;}@media (max-width: 768px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}}
+.dynamic-author-image-rounded{border-radius:100%;}.dynamic-featured-image, .dynamic-author-image{vertical-align:middle;}.one-container.blog .dynamic-content-template:not(:last-child), .one-container.archive .dynamic-content-template:not(:last-child){padding-bottom:0px;}.dynamic-entry-excerpt > p:last-child{margin-bottom:0px;}
+</style>
+
+<link rel="stylesheet" id="generatepress-dynamic-css" href="https://www.psicoactiva.com/wp-content/uploads/generatepress/style.min.css" media="print" onload="this.media=&#039;all&#039;;this.onload=null;"></link>
+
+		</head>
+
+<body class="post-template-default single single-post postid-221759 single-format-standard wp-custom-logo wp-embed-responsive post-image-below-header post-image-aligned-center secondary-nav-below-header secondary-nav-aligned-left sticky-menu-slide right-sidebar nav-below-header separate-containers nav-search-enabled header-aligned-left dropdown-hover featured-image-active aa-prefix-inici- aa-disabled-content" >
+
+
+</div>
+		</nav>
+		
+	<div class="site grid-container container hfeed" id="page">
+		</div>		<div class="site-content" id="content">
+			
+	<div class="content-area" id="primary">
+		<main class="site-main" id="main">
+
+
+    </div>
+</div>
+<div class="entradilla">Mejora tu memoria y capacidad de retener información con la prueba dual n-back de entrenamiento cognitivo.</div>
+
+			</header>
+			<div class="stickySHARE out-containerSHARE">
+<div class="wplogout-social-wrapper">
+
+
+</div>
+	
+
+<style>
+    /* https://stackoverflow.com/questions/20456694/grid-of-responsive-squares */
+    .psdnb_square {
+        float:left;
+        position: relative;
+        width: 30%;
+        padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+        margin:1.66%;
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+        overflow:hidden;
+        /*outline:1px solid #ddd;*/
+        box-shadow: 0 0 0 1px #ddd;
+        border-radius:5px;
+    }
+    @media (max-width: 767px) {
+        .psdnb_container {
+            width:100%;
+        }
+    }
+    @media (min-width: 768px) {
+        .psdnb_container {
+            width:80%;
+            margin-left:10%;
+            margin-right:10%;
+        }
+    }
+    @media (min-width: 1200px) {
+        .psdnb_container {
+            width:70%;
+            margin-left:15%;
+            margin-right:15%;
+        }
+    }
+    .psdnb_container {
+        border:3px solid #555555;
+        display: inline-block;
+        border-radius: 10px;
+    }
+    .psdnb_controls {text-align:center;}
+    .psdnb_countdown {
+      text-align:center;
+        position:absolute;
+        width:100%;
+        outline:4px solid green;
+        display: inline-block;
+     }
+    #n, #modo {
+        height: 43px;
+        vertical-align: -1px;
+        padding: 0px 15px;
+    }
+    #comenzar, #responderPOSICION, #responderSONIDO, #responderCOLOR, #responderFORMA, #n, #modo {
+      border-radius: 5px;
+    }
+    .button:disabled,
+    .button[disabled]{
+      border: 1px solid #999999;
+      background-color: #cccccc;
+      color: #666666;
+      cursor: not-allowed;
+    }
+
+</style>
+
+  <!-- <audio id="my-audio2" src="speech_20230401132001996-HOMBRE.mp3" preload="auto"></audio> -->
+  <audio id="my-audio" src="https://www.psicoactiva.com/include/wordpress/n-back/audio-dual-nback.mp3" preload="auto"></audio>
+  <script>
+
+
+/* Mujer */    
+    caracteresMp3 = { '0': [0, 0.6],
+                      '1': [1.0, 1.5],
+                      '2': [1.9, 2.5],
+                      '3': [2.9, 3.4],
+                      '4': [3.8, 4.4],
+                      '5': [4.8, 5.5],
+                      '6': [5.9, 6.5],
+                      '7': [6.9, 7.5],
+                      '8': [7.9, 8.5],
+                      '9': [8.9, 9.5]}
+/*
+                      'A': [9.9, 10.3],
+                      'B': [10.7, 11.2],
+                      'C': [11.6, 12.0],
+                      'D': [12.5, 12.9],
+                      'E': [13.3, 13.7],
+                      'F': [14.1, 14.6],
+                      'G': [15.1, 15.5],
+                      'H': [16.0, 16.5],
+                      'I': [17.0, 17.3],
+                      'J': [17.7, 18.3],
+                      'K': [18.3, 19.1],
+                      'L': [19.6, 20.0],
+                      'M': [20.5, 20.9],
+                      'N': [21.4, 21.8],
+                      'O': [22.3, 22.7],
+                      'P': [23.1, 23.4],
+                      'Q': [23.9, 24.2],
+                      'R': [24.7, 25.2],
+                      'S': [25.6, 26.2],
+                      'T': [26.6, 26.9],
+                      'U': [27.4, 27.7],
+                      'V': [28.2, 28.7],
+                      'W': [29.1, 29.8],
+                      'X': [30.3, 30.9],
+                      'Y': [31.3, 32.0],
+                      'Z': [32.5, 33.0]};
+  */  
+    
+  </script>
+  
+
+<!--
+<svg viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg'><text x='0' y='11' style='fill:#99dd33;font-family:"Azeret Mono"'>X</text></svg>
+<svg viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg'><text x='0' y='11' style='fill:#99dd33;'>X</text></svg>
+
+
+<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><text x='0' y='11' style='fill:#99dd33;'>X</text></svg>
+<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red' /></svg>
+<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><polygon points='50 10, 65 35, 90 35, 70 55, 80 80, 50 65, 20 80, 30 55, 10 35, 35 35' style='fill: yellow;'/></svg>
+-->
+    <div class="psdnb_container">
+        <div id="casilla_11" class="psdnb_square"></div>
+        <div id="casilla_12" class="psdnb_square"></div>
+        <div id="casilla_13" class="psdnb_square"></div>
+        <div id="casilla_21" class="psdnb_square"></div>
+        <div id="casilla_22" class="psdnb_square">
+                <div class="psdnb_countdown"><svg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'><text id="countdownText" x='1.6' y='12.7' style='fill:#666;font-family:"Azeret Mono"'></text></svg></div>
+        </div>
+        <div id="casilla_23" class="psdnb_square"></div>
+        <div id="casilla_31" class="psdnb_square"></div>
+        <div id="casilla_32" class="psdnb_square"></div>
+        <div id="casilla_33" class="psdnb_square"></div>
+    </div>
+
+    <div class="psdnb_controls">
+        <select id="modo">
+            <option value=1>n-back</option>
+            <option value=2 selected>dual n-back</option>
+            <option value=3>triple n-back</option>
+            <option value=4>cuadruple n-back</option>
+        </select>
+
+        <select id="n">
+            <option value=1>N = 1</option>
+            <option value=2>N = 2</option>
+            <option value=3>N = 3</option>
+            <option value=4>N = 4</option>
+            <option value=5>N = 5</option>
+        </select>
+
+        <button id="comenzar" type="button" onclick="iniciarCuentaAtras(3);" class="button">COMENZAR</button>
+        <button id="responderPOSICION" type="button" onclick="respuesta('POSICION');" class="button" disabled>POSICION</button>
+        <button id="responderSONIDO" type="button" onclick="respuesta('SONIDO');" class="button" disabled>SONIDO</button>
+        <button id="responderCOLOR" type="button" onclick="respuesta('COLOR');" class="button" disabled>COLOR</button>
+        <button id="responderFORMA" type="button" onclick="respuesta('FORMA');" class="button" disabled>FORMA</button>
+        <br><br>
+        <table id="tablaResultados">
+            <tr>
+            <td>Partida</td>
+            <td>Modo</th>
+            <td>N</th>
+            <td>Aciertos</td>
+            <td>Fallos</td>
+            <td>Omisiones</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <script>
+        
+    var formas = [  "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='5' width='90' height='90' rx='10' fill='#XXX' /></svg>",                                                              // Cuadrado
+                    "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><polygon points='50,10 80,50 50,90 20,50' fill='#XXX' /></svg>",                                                                     // Rombo
+                    "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><polygon points='30.1,84.5 10.2,50 30.1,15.5 69.9,15.5 89.8,50 69.9,84.5' fill='#XXX' /></svg>",                                     // Hexagono
+                    "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><polygon points='50,9 60.5,39.5 92.7,40.1 67,59.5 76.4,90.3 50,71.9 23.6,90.3 32.9,59.5 7.2,40.1 39.4,39.5' fill='#XXX' /></svg>",   // Estrella
+                    "<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><polygon points='156.43,186.83 43.57,186.83 8.70,79.50 100,13.17 191.30,79.50' fill='#XXX' /></svg>",                                // Pentágono
+                    "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='40' fill='#XXX' /></svg>",                                                                                // Círculo
+                    "<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><polygon points='50 10, 90 90, 10 90' fill='#XXX' /></svg>"                                                                          // Triangulo
+                  ];
+
+/*
+    var colores = [ 
+                    '45B0E5',
+                    'D64545',
+                    'E57A45',
+                    '5485E5',
+                    'E5B045',
+                    '9065E5',
+                    '7DB545',
+                    'E54594',
+                    '45C5B0',
+                    '7D8995'
+                  ];
+*/
+    var colores = [ '4dc4ff',
+                    'ee4d4d',
+                    'ff884d',
+                    '5e94ff',
+                    'ffc44d',
+                    'a071ff',
+                    '8bc94d',
+                    'ff4da5',
+                    '4ddbc4',
+                    '8b98a6'
+                  ];
+
+    var sonidos = [ '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ];
+    var posiciones = [  'casilla_11',
+                        'casilla_12',
+                        'casilla_13',
+                        'casilla_21',
+                        'casilla_22',
+                        'casilla_23',
+                        'casilla_31',
+                        'casilla_32',
+                        'casilla_33'
+                      ];
+
+
+    var repeticiones = 20;  // Total de jugadas
+    var jugadaActual = -1;  // Valor entre 0 y repeticiones que indica la jugada actual (-1 es no asignado)
+    var partida = [];       // {forma:formas[0], color:colores[0], sonido:sonidos[0], posicion:posiciones[0]}
+    var numPartida = 1;
+    var soluciones = [];    // Array de 48 posiciones que contendrá '0' si no hay que pulsar el botón en esa jugada, y (C)olor, (F)orma, (P)osicion, (S)onido si hay que pulsar algún botón. Se utiliza para asegurar el porcentaje de respuestas positivas.
+    for(var i = 0; i < repeticiones; i++) soluciones.push('0');
+
+
+    //var textoSvg = '<svg viewBox="0 0 30 30" style="width: 100%;"><text id="textContent" x="9.4" y="20" style="fill:#ffffff; font-family: ""Azeret Mono"", monospace;">XXX</text></svg>';
+    var textoSvg = "<svg viewBox='0 0 15 15' xmlns='http://www.w3.org/2000/svg'><text x='2' y='13.1' style='fill:#99dd33;font-family:arial'>XXX</text></svg>";
+    var seleccionN = document.querySelector("#n");
+    var seleccionModo = document.querySelector("#modo");
+    var botonComenzar = document.querySelector("#comenzar");
+    var botonResponderPOSICION = document.querySelector("#responderPOSICION");
+    var botonResponderSONIDO = document.querySelector("#responderSONIDO");
+    var botonResponderCOLOR = document.querySelector("#responderCOLOR");
+    var botonResponderFORMA = document.querySelector("#responderFORMA");
+/*
+    var casilla_11 = document.querySelector("#casilla_11");
+    var casilla_12 = document.querySelector("#casilla_12");
+    var casilla_13 = document.querySelector("#casilla_13");
+    var casilla_21 = document.querySelector("#casilla_21");
+    var casilla_22 = document.querySelector("#casilla_22");
+    var casilla_23 = document.querySelector("#casilla_23");
+    var casilla_31 = document.querySelector("#casilla_31");
+    var casilla_32 = document.querySelector("#casilla_32");
+    var casilla_33 = document.querySelector("#casilla_33");
+*/
+    var aciertos = {POSICION:0, SONIDO:0, COLOR:0, FORMA:0}, fallos = {POSICION:0, SONIDO:0, COLOR:0, FORMA:0}, omisiones = {POSICION:0, SONIDO:0, COLOR:0, FORMA:0};
+    var n, modo; // Modo: 1:n-back (posicion), 2:dual n-back (posicion + sonido), 3:triple n-back (posicion + sonido + color), 4:Cuadruple n-back (posicion + sonido + color + forma). estímulos
+    
+/*
+    svgFile = "\"data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><polygon points='50 10, 65 35, 90 35, 70 55, 80 80, 50 65, 20 80, 30 55, 10 35, 35 35' style='fill: yellow;'/></svg>\"";
+    document.querySelector("#casilla_22").style.backgroundImage = "url(" + svgFile + ")";
+
+<svg height='100' width='100'><circle cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red' /></svg>
+
+*/
+
+
+    /* Muestra la cuenta atrás antes de dar comienzo a la partida */
+    function iniciarCuentaAtras(segundos) {
+
+        var i = segundos;
+        document.querySelector('#countdownText').textContent = i;
+        var intervalo = setInterval(function() {
+            if (--i < 0) {
+                clearInterval(intervalo);
+                document.querySelector('#countdownText').textContent = "";
+                inicializarPrueba();
+            } else {document.querySelector('#countdownText').textContent = i;}
+        }, 1000);
+    }
+
+    // modo: El modo de juego con 1 (posicion), 2 (posicion + sonido), 3 (posicion + sonido + color) ? 4 (posicion + sonido + color + forma) estímulos
+    function inicializarPrueba() {
+        botonComenzar.disabled = true;
+        seleccionModo.disabled = true;
+        seleccionN.disabled = true;
+        casilla_22.style.backgroundImage = "";
+        aciertos = {POSICION:0, SONIDO:0, COLOR:0, FORMA:0};
+        fallos = {POSICION:0, SONIDO:0, COLOR:0, FORMA:0};
+        omisiones = {POSICION:0, SONIDO:0, COLOR:0, FORMA:0};
+        soluciones = []; for(var i = 0; i < repeticiones; i++) soluciones.push('0');
+        n = seleccionN.value;
+        modo = seleccionModo.value;
+        arrayPosiciones = [];
+        arraySonidos = [];
+        arrayColores = [];
+        arrayFormas = [];
+        partida = [];
+        jugadaActual = -1;
+
+        // Prueba n-back. Se utiliza siempre la misma figura: forma[0] y el mismo color: color[0]. No se reproduce sonido y solo cambia la posición.
+        // Probabilidad de coindidencia de la posición 0.33
+        //probabilidad = 0.33 / modo; //(1:33%, 2:18.13% 3:12.53%, 4:8.51%)
+        switch(modo){
+            case "1":
+                probabilidad = 0.33;
+                arrayPosiciones = generarArrayAleatorioElementos('POSICION', repeticiones, posiciones, n, probabilidad);
+                for (i = 0; i < repeticiones; i++) arraySonidos.push("");
+                for (i = 0; i < repeticiones; i++) arrayColores.push(colores[0]);
+                for (i = 0; i < repeticiones; i++) arrayFormas.push(formas[0]);
+                break;
+                //Array(5).fill(2)
+            case "2":
+                probabilidad = 0.1813;
+                arrayPosiciones = generarArrayAleatorioElementos('POSICION', repeticiones, posiciones, n, probabilidad);
+                arraySonidos = generarArrayAleatorioElementos('SONIDO', repeticiones, sonidos, n, probabilidad);
+                for (i = 0; i < repeticiones; i++) arrayColores.push(colores[0]);
+                for (i = 0; i < repeticiones; i++) arrayFormas.push(formas[0]);
+                break;
+            case "3":
+                probabilidad = 0.1253;
+                arrayPosiciones = generarArrayAleatorioElementos('POSICION', repeticiones, posiciones, n, probabilidad);
+                arraySonidos = generarArrayAleatorioElementos('SONIDO', repeticiones, sonidos, n, probabilidad);
+                arrayColores = generarArrayAleatorioElementos('COLOR', repeticiones, colores, n, probabilidad);
+                for (i = 0; i < repeticiones; i++) arrayFormas.push(formas[0]);
+                break;
+            case "4":
+                probabilidad = 0.0851;
+                arrayPosiciones = generarArrayAleatorioElementos('POSICION', repeticiones, posiciones, n, probabilidad);
+                arraySonidos = generarArrayAleatorioElementos('SONIDO', repeticiones, sonidos, n, probabilidad);
+                arrayColores = generarArrayAleatorioElementos('COLOR', repeticiones, colores, n, probabilidad);
+                arrayFormas = generarArrayAleatorioElementos('FORMA', repeticiones, formas, n, probabilidad);
+                break;
+        }
+    
+        // Llenamos el array con la (partida)
+        for (var i = 0; i < arrayPosiciones.length; i++) {
+            valorPosicion = arrayPosiciones[i];
+            valorSonido = (arraySonidos.length > 0)?arraySonidos[i]:"";
+            valorColor = (arrayColores.length > 0)?arrayColores[i]:"";
+            valorForma = (arrayFormas.length > 0)?arrayFormas[i]:"";
+            partida.push({posicion: valorPosicion, sonido: valorSonido, color: valorColor, forma: valorForma});
+        }
+
+        comenzarPrueba();
+    };
+
+
+
+
+    /* Da comienzo a la prueba. Inicializa el estado de los botones y muestra los elementos uno tras otro */
+    function comenzarPrueba() {
+
+      var mostrarElemento = function() {
+        // mostrar figura
+        jugadaActual++;
+        omisiones[soluciones[jugadaActual]]++;  // Al mostrar la figura, añadimos una omisión. Si llega a pulsar el botón correcto, la restaremos
+        mostrarFigura(partida.shift());
+        botonResponderPOSICION.disabled = false;
+        botonResponderSONIDO.disabled = false;
+        botonResponderCOLOR.disabled = false;
+        botonResponderFORMA.disabled = false;
+        setTimeout(function() {
+          // vaciar la casilla tras 500ms
+          ocultarFigura();
+          if (partida.length > 0) {
+            // Mostrar siguiente elemento (si quedan) tras 2000ms
+            setTimeout(mostrarElemento, 2000);
+          } else {
+              setTimeout(function() {
+                // Prueba finalizada
+                ocultarFigura();
+                finalizarPrueba();
+            }, 2000);
+          }
+
+        }, 500);
+      }
+      mostrarElemento();
+    }
+
+
+    /* Fin de la prueba. Actualiza el estado de los botones y muestra el resultado  */
+    function finalizarPrueba() {
+        botonComenzar.disabled = false;
+        seleccionN.disabled = false;
+        seleccionModo.disabled = false;
+        botonResponderPOSICION.disabled = true;
+        botonResponderSONIDO.disabled = true;
+        botonResponderCOLOR.disabled = true;
+        botonResponderFORMA.disabled = true;
+        var _n = seleccionN.value;
+        var _modo = seleccionModo.options[seleccionModo.selectedIndex].text; // seleccionModo.value;
+        var _aciertos = aciertos["POSICION"] + aciertos["SONIDO"] + aciertos["COLOR"] + aciertos["FORMA"];
+        var _fallos = fallos["POSICION"] + fallos["SONIDO"] + fallos["COLOR"] + fallos["FORMA"];
+        var _omisiones = omisiones["POSICION"] + omisiones["SONIDO"] + omisiones["COLOR"] + omisiones["FORMA"];
+        document.querySelector("#tablaResultados").innerHTML += "<tr><td>" + (numPartida++) + "</td><td>" + _modo + "</td><td>" + _n + "</td><td>" + _aciertos + "</td><td>" + _fallos + "</td><td>" + _omisiones + "</td></tr>";
+    }
+
+    // n: El número de posiciones atrás a mirar: 1, 2, 3, 4 ó 5
+    function generarArrayAleatorioElementos(tipoEstimulo, repeticiones, arrayElementos, n, probabilidad) {
+        var array = [];
+
+        function obtenerElementoAleatorio(elementos, excluirElemento) {
+          const elementosFiltrados = elementos.filter(elemento => elemento !== excluirElemento);
+          return elementosFiltrados[Math.floor(Math.random() * elementosFiltrados.length)];
+        }
+
+        for (var i = 0; i < repeticiones; i++) {
+            if (i >= n && soluciones[i] == '0' && Math.random() < probabilidad) { // Si vamos por un elemento mayor que (n), Con probabilidad (probabilidad) repito el mismo elemento que aparecía (n) posiciones atrás
+                elemento = array[i-n];
+                soluciones[i] = tipoEstimulo;
+            } else if (i < n) { // Si es el primer elemento, obtengo un valor cualquiera
+                elemento = arrayElementos[Math.floor(Math.random() * arrayElementos.length)];
+            } else { // Si i >= n, obtenemos un elemento aleatorio que no coincida con el la (n) posiciones atrás.
+                elemento = obtenerElementoAleatorio(arrayElementos, array[i-n]);
+            }
+            array.push(elemento);
+        }
+        return array;
+    }
+
+    // Función para mostrar una figura aleatoria en una posición aleatoria del tablero
+    function mostrarFigura(elemento) {
+        posicion = elemento.posicion;
+        forma = elemento.forma;
+        color = elemento.color;
+        sonido = elemento.sonido;
+        botonResponderPOSICION.disabled = false;
+        botonResponderSONIDO.disabled = false;
+        botonResponderCOLOR.disabled = false;
+        botonResponderFORMA.disabled = false;
+
+        var casilla = document.querySelector('#' + posicion);
+        forma = forma.replace('XXX', color);
+        // svgFile = "\"data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><polygon points='50 10, 65 35, 90 35, 70 55, 80 80, 50 65, 20 80, 30 55, 10 35, 35 35' style='fill: yellow;'/></svg>\"";
+        //casillas[casillaAleatoria].style.backgroundImage = "url('data:image/svg+xml," + encodeURIComponent(figura) + "')";
+        svgFile = "\"data:image/svg+xml;utf8," + encodeURIComponent(forma) + "\"";
+        casilla.style.backgroundImage = "url(" + svgFile + ")";
+        reproducirSonido(sonido);
+    }
+
+/*
+    function mostrarCaracter(caracter) {
+        var svgFile = textoSvg.replace('XXX', caracter);
+        svgFile = "\"data:image/svg+xml;utf8," + encodeURIComponent(svgFile) + "\"";
+        casilla_22.style.backgroundImage = "url(" + svgFile + ")";
+        document.querySelector('#countdownText').textContent = caracter;
+    }
+*/
+    //Según el botón pulsado: POSICION, SONIDO, COLOR, FORMA
+    function respuesta(tipoEstimulo) {
+        document.querySelector("#responder" + tipoEstimulo).disabled = true;
+        if (soluciones[jugadaActual] == tipoEstimulo) {
+          //console.log('·Antes acierto. estimulo:' + tipoEstimulo + ' - aciertos:' + aciertos[tipoEstimulo]);
+            aciertos[tipoEstimulo]++;
+            omisiones[soluciones[jugadaActual]]--; // Si acertó la respuesta, resto la omisión que se añadió al mostrar la figura
+          //console.log('Despues acierto. estimulo:' + tipoEstimulo + ' - aciertos:' + aciertos[tipoEstimulo]);
+        } else {
+            fallos[tipoEstimulo]++;
+        }
+    }
+
+
+    function ocultarFigura() {
+        casilla_11.style.backgroundImage = "";
+        casilla_12.style.backgroundImage = "";
+        casilla_13.style.backgroundImage = "";
+        casilla_21.style.backgroundImage = "";
+        casilla_22.style.backgroundImage = "";
+        casilla_23.style.backgroundImage = "";
+        casilla_31.style.backgroundImage = "";
+        casilla_32.style.backgroundImage = "";
+        casilla_33.style.backgroundImage = "";
+    }
+
+
+
+    var startTime = 0;
+    var endTime = 0;
+    const audioElement = document.getElementById("my-audio");    
+    function reproducirSonido(sonido) {
+      //console.log(sonido);
+        if (sonido != "") {
+            startTime = caracteresMp3[sonido][0];
+            endTime = caracteresMp3[sonido][1];
+            audioElement.currentTime = startTime;
+      //console.log('play: ' + startTime);
+            audioElement.play();
+            audioElement.addEventListener("timeupdate", function() {
+                if (audioElement.currentTime >= endTime) {
+      //console.log('pause: ' + endTime);
+                    audioElement.pause();
+                    audioElement.currentTime = startTime;
+                }
+            });
+        }
+    }
+
+
+    // Mostrar u ocultar botones de respuesta según el modo de juego.
+    function cambioModo(){
+        var modo = seleccionModo.value;
+        if (modo == 1) {
+            botonResponderSONIDO.style.display = 'none';
+            botonResponderCOLOR.style.display = 'none';
+            botonResponderFORMA.style.display = 'none';
+            
+        } else if (modo == 2) {
+            botonResponderSONIDO.style.display = '';
+            botonResponderCOLOR.style.display = 'none';
+            botonResponderFORMA.style.display = 'none';
+
+        } else if (modo == 3) {
+            botonResponderSONIDO.style.display = '';
+            botonResponderCOLOR.style.display = '';
+            botonResponderFORMA.style.display = 'none';
+
+        } else if (modo == 4) {
+            botonResponderSONIDO.style.display = '';
+            botonResponderCOLOR.style.display = '';
+            botonResponderFORMA.style.display = '';
+        }
+    }
+    seleccionModo.addEventListener("change", cambioModo);
+    cambioModo();
+
+    </script>
+
+</body>
+</html>
+
